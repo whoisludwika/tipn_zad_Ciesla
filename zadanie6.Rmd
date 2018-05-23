@@ -1,0 +1,55 @@
+---
+title: "Chili sin carne"
+author: "Ludwika Cieśla"
+date: "18 maja 2018"
+output: html_document
+---
+
+
+### **Chili sin carne** - Podczas kiedy cały świat zna chili con carne, to mniej osób słyszało o jego lepszej wersji, czyli bezmięsnym chili sin carne. Zamiast mięsa pełne jest sycącej fasoli, duszonych warzyw i rozgrzewających przypraw.
+
+
+| Ilość | Składnik |
+|-------|----------|
+| 4 puszki |  czerwonej fasoli |
+| 2 puszki | krojonych pomidorów |
+| 2 laski | selera naciowego |
+| 2 | czerwone cebule |
+| 2 | czerwone papryki |
+| 2 | łyżki sosu sojowego |
+| 1 | nieduża marchewka |
+| 1 ½ | łyżeczki mielonego kminu |
+| 1 ½ | łyżeczki ostrej papryki |
+|1 | łyżeczka słodkiej papryki |
+|1 | łyżeczka wędzonej papryki |
+
+#### Przygotowanie
+
+
+  1. Cebulę obrać i pokroić w kostkę, resztę warzyw również pokroić w drobną kostkę. Na dnie dużego garnka rozgrzać kilka łyżek oleju, dodać pokrojone warzywa oraz wszystkie przyprawy, dokładnie wymieszać i dusić wszystko na małym ogniu przez przynajmniej 10 minut.
+   2. Po upływie tego czasu dodać fasolę oraz pomidory razem z sosem sojowym, octem balsamicznym, cukrem trzcinowym, łyżeczką soli i porządną szczyptą czarnego pieprzu. Dokładnie wymieszać i dusić przez przynajmniej godzinę, jeśli gulasz będzie wydawał się za rzadki dusić go bez przykrycia, jeśli odparuje i będzie miał odpowiednią gęstość można go przykryć. Pod koniec gotowania spróbować chili i według uznania dodać więcej soli, ostrej papryki lub pieprzu.
+  3. Podawać z ryżem lub pieczywem, każdą porcję skropić sokiem z limonki i posypać świeżą kolendrą.
+  
+![](http://www.jadlonomia.com/wp-content/uploads/2014/01/MG_9166-600x900.jpg)
+
+
+[**Link do strony, z której jest przepis**](http://www.jadlonomia.com/)
+
+```{r}
+ile <- function(dzien, miesiac, rok, lata_obsuwy) {
+  g_2018 <- (((12- miesiac)*30)- (30- dzien))*24
+  g_2022 <- 6*30*24
+  pelnegodziny <- (2022- rok-1 + lata_obsuwy)* 365 *24
+  print(g_2018 + g_2022 + pelnegodziny)
+}
+
+ile(07,05,2018,0)
+```
+
+```{r}
+library(tidyverse)
+ggplot(data = mpg) +
+  geom_point(mapping = aes (x = displ, y = cty))
+```
+
+
